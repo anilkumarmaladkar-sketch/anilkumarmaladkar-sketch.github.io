@@ -201,4 +201,36 @@ h1{
 }
 
 
+@media (max-width: 768px) {
+    .site-nav {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    .nav-links {
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+
+    .hero {
+        padding: 0 1.5rem;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .about,
+    .skills,
+    .projects,
+    .contact {
+        padding: 3rem 1.5rem;
+    }
+
+    .container {
+        padding: 0 1rem;
+    }
+}
 
