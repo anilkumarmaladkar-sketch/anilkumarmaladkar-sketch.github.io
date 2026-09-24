@@ -67,13 +67,11 @@ h1 {
     background-color: #67e8f9;
 }
 
-h1{
-    color: white;
-}
-
 .about {
     padding: 5rem 4rem;
     max-width: 750px;
+    margin: 0 auto;
+    background-color: #13131b;
 }
 
 .about h2 {
@@ -129,6 +127,7 @@ h1{
 
 .projects {
     padding: 5rem 4rem;
+    background-color: #13131b;
 }
 
 .projects h2 {
