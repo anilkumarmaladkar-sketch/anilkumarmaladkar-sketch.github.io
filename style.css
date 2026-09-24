@@ -68,7 +68,7 @@ h1 {
 }
 
 h1{
-    color: rgb(167, 204, 237);
+    color: white;
 }
 
 .about {
@@ -215,6 +215,7 @@ h1{
     }
 
     .hero {
+        min-height: 60vh;
         padding: 0 1.5rem;
     }
 
