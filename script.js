@@ -69,7 +69,7 @@ function toast(message, type = "success") {
 }
 
 // Contact form -> mailto
-const EMAIL = "anilmaladkar@gmail.com";
+const EMAIL = "anilkumarmaladkar@gmail.com";
 const contactForm = document.getElementById("contact-form");
 contactForm.addEventListener("submit", (e) => {
   e.preventDefault();
