@@ -1,133 +1,566 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anilkumar M | Information Science Student</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <nav class="site-nav">
-        <a class="logo" href="#home">
-            Anilkumar M
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#08080a" />
+    <meta
+      name="description"
+      content="Anilkumar Maladkar — Information Science student at MSRIT, Bangalore. Building software from the ground up: databases, backend logic, APIs and interfaces."
+    />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2308080a'/%3E%3Ctext x='32' y='44' font-family='monospace' font-size='34' font-weight='700' fill='%23ccff00' text-anchor='middle'%3EA%3C/text%3E%3C/svg%3E" />
+    <link rel="preconnect" href="https://api.fontshare.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://api.fontshare.com/v2/css?f[]=clash-display@500,600,700&f[]=satoshi@400,500,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Anilkumar Maladkar — Information Science Student & Web Developer</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
+      <symbol id="icon-menu" viewBox="0 0 24 24"><path d="M4 12h16" /><path d="M4 6h16" /><path d="M4 18h16" /></symbol>
+      <symbol id="icon-x" viewBox="0 0 24 24"><path d="M18 6 6 18" /><path d="m6 6 12 12" /></symbol>
+      <symbol id="icon-arrow-down" viewBox="0 0 24 24"><path d="M12 5v14" /><path d="m19 12-7 7-7-7" /></symbol>
+      <symbol id="icon-arrow-up" viewBox="0 0 24 24"><path d="M12 19V5" /><path d="m5 12 7-7 7 7" /></symbol>
+      <symbol id="icon-arrow-up-right" viewBox="0 0 24 24"><path d="M7 7h10v10" /><path d="M7 17 17 7" /></symbol>
+      <symbol id="icon-mail" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2" /><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" /></symbol>
+      <symbol id="icon-github" viewBox="0 0 24 24"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" /><path d="M9 18c-4.51 2-5-2-7-2" /></symbol>
+      <symbol id="icon-linkedin" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" /><rect x="2" y="9" width="4" height="12" /><circle cx="4" cy="4" r="2" /></symbol>
+      <symbol id="icon-send" viewBox="0 0 24 24"><path d="m22 2-7 20-4-9-9-4Z" /><path d="M22 2 11 13" /></symbol>
+      <symbol id="icon-asterisk" viewBox="0 0 24 24"><path d="M12 6v12" /><path d="M17.196 9 6.804 15" /><path d="m6.804 9 10.392 6" /></symbol>
+      <symbol id="icon-layers" viewBox="0 0 24 24"><path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z" /><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65" /><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65" /></symbol>
+      <symbol id="icon-book-open" viewBox="0 0 24 24"><path d="M12 7v14" /><path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z" /></symbol>
+      <symbol id="icon-database" viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="9" ry="3" /><path d="M3 5V19A9 3 0 0 0 21 19V5" /><path d="M3 12A9 3 0 0 0 21 12" /></symbol>
+    </svg>
+
+    <div class="grain" aria-hidden="true"></div>
+    <div id="toast-root" aria-live="polite"></div>
+
+    <header class="site-nav" id="site-nav" data-testid="nav-header">
+      <div class="nav-pill">
+        <a href="#top" class="brand" data-testid="nav-brand-logo">
+          <span class="dot dot-lime pulse-dot"></span>Anilkumar<span class="accent">.dev</span>
         </a>
-        <div class="nav-links">
-            <a href="#about">About</a>
-            <a href="#skills">Skills</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
+        <nav class="nav-links">
+          <a href="#about" data-testid="nav-link-about">About</a>
+          <a href="#skills" data-testid="nav-link-skills">Skills</a>
+          <a href="#projects" data-testid="nav-link-projects">Projects</a>
+        </nav>
+        <div class="nav-right">
+          <a href="#contact" class="btn btn-lime btn-nav" data-testid="nav-cta-contact">Say hello</a>
+          <button
+            class="nav-toggle"
+            id="nav-toggle"
+            data-testid="nav-mobile-toggle"
+            aria-label="Toggle menu"
+            aria-expanded="false"
+          >
+            <svg class="icon icon-menu"><use href="#icon-menu"></use></svg>
+            <svg class="icon icon-close"><use href="#icon-x"></use></svg>
+          </button>
         </div>
-    </nav>
-    <header class="hero" id="hero">
-        <h1>Anilkumar M</h1>
-        <p>I enjoy turning ideas into working projects while improving my
-            fundamentals in Java, databases, web development, and problem solving.</p>
-        <a class="button" href="#projects">View My Projects</a>
+      </div>
+      <div class="mobile-menu" id="mobile-menu" data-testid="nav-mobile-menu" hidden>
+        <a href="#about" data-testid="nav-link-about-mobile">About</a>
+        <a href="#skills" data-testid="nav-link-skills-mobile">Skills</a>
+        <a href="#projects" data-testid="nav-link-projects-mobile">Projects</a>
+        <a href="mailto:anilmaladkar@gmail.com" class="mobile-hello">Say hello</a>
+      </div>
     </header>
 
-    <section class="about" id="about">
-    <div class="container">
-        <h2>About me</h2>
-        <p>
-            I'm Anilkumar, a 3rd-year Information Science student at
-            M.S. Ramaiah Institute of Technology (MSRIT), Bangalore,
-            focused on learning the fundamentals of software engineering.
-        </p>
-        <p>
-            I enjoy building applications from the ground up —
-            designing databases, developing backend logic, connecting APIs,
-            and creating interfaces that people can actually use.
-        </p>
-        <p>
-            My current foundation includes Java, Data Structures &
-            Algorithms, DBMS, and frontend development. I've built projects
-            including a Java/MySQL Hostel Management System and
-            web applications using HTML, CSS, and JavaScript.
-        </p>    
-        <p>
-            I'm currently focused on building my web development 
-            skills and improving my DSA through daily practice.
-        </p>
-    </div>
-    </section>
-    
-    <section class="skills" id="skills">
-        <h2>Skills</h2>
-        <div class="skill-group">
-            <h3>Languages</h3>
-            <div class="skill-tags">
+    <main>
+      <section class="hero" id="top" data-testid="hero-section">
+        <div class="glow glow-lime blob-1" aria-hidden="true"></div>
+        <div class="glow glow-violet blob-2" aria-hidden="true"></div>
+
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow" data-testid="hero-eyebrow">
+              <span class="dot dot-lime pulse-dot"></span>Information Science Student · MSRIT
+            </p>
+            <h1 class="hero-title" data-testid="hero-headline-text">
+              Building software<br />from the <span class="outline-lime">ground up</span><span class="accent">.</span>
+            </h1>
+            <p class="hero-sub">
+              I'm Anilkumar M — a third-year Information Science student at M.S. Ramaiah
+              Institute of Technology. I design databases, write backend logic, wire up APIs
+              and shape interfaces people actually enjoy using.
+            </p>
+            <div class="hero-actions">
+              <a href="#projects" class="btn btn-lime" data-testid="hero-cta-projects">
+                View projects <svg class="icon icon-sm"><use href="#icon-arrow-down"></use></svg>
+              </a>
+              <a href="#contact" class="btn btn-ghost" data-testid="hero-cta-contact">
+                Get in touch <svg class="icon icon-sm"><use href="#icon-arrow-up-right"></use></svg>
+              </a>
+            </div>
+            <div class="hero-metrics" data-testid="hero-metrics-grid">
+              <div class="metric">
+                <p class="metric-value">3rd</p>
+                <p class="metric-label">Year @ MSRIT</p>
+              </div>
+              <div class="metric">
+                <p class="metric-value">3+</p>
+                <p class="metric-label">Projects built</p>
+              </div>
+              <div class="metric">
+                <p class="metric-value">6+</p>
+                <p class="metric-label">Technologies</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-visual">
+            <div class="terminal" data-testid="hero-terminal-card">
+              <div class="terminal-head">
+                <span class="tdot tdot-red"></span>
+                <span class="tdot tdot-yellow"></span>
+                <span class="tdot tdot-green"></span>
+                <span class="terminal-title">anil@msrit — zsh</span>
+              </div>
+              <div class="terminal-body">
+                <p class="t-cmd"><span class="t-prompt">$</span> whoami</p>
+                <p class="t-out">anilkumar — information science @ msrit bangalore</p>
+                <p class="t-cmd"><span class="t-prompt">$</span> cat stack.txt</p>
+                <p class="t-out">java · javascript · sql · c · html · css</p>
+                <p class="t-cmd"><span class="t-prompt">$</span> focus --now</p>
+                <p class="t-out">dsa daily practice · web development</p>
+                <p class="t-cmd"><span class="t-prompt">$</span> status</p>
+                <p class="t-out t-accent">open to internships → true</p>
+                <p class="t-cmd"><span class="t-prompt">$</span> <span class="cursor"></span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="marquee" data-testid="skills-marquee-section">
+        <div class="marquee-track">
+          <div class="marquee-row">
+            <span class="mq-item"><span class="mq-text">Java</span><svg class="icon mq-star"><use href="#icon-asterisk"></use></svg></span>
+            <span class="mq-item"><span class="mq-text">JavaScript</span><svg class="icon mq-star"><use href="#icon-asterisk"></use></svg></span>
+            <span class="mq-item"><span class="mq-text">SQL</span><svg class="icon mq-star"><use href="#icon-asterisk"></use></svg></span>
+            <span class="mq-item"><span class="mq-text">C</span><svg class="icon mq-star"><use href="#icon-asterisk"></use></svg></span>
+            <span class="mq-item"><span class="mq-text">HTML</span><svg class="icon mq-star"><use href="#icon-asterisk"></use></svg></span>
+            <span class="mq-item"><span class="mq-text">CSS</span><svg class="icon mq-star"><use href="#icon-asterisk"></use></svg></span>
+            <span class="mq-item"><span class="mq-text">Data Structures &amp; Algorithms</span><svg class="icon mq-star"><use href="#icon-asterisk"></use></svg></span>
+            <span class="mq-item"><span class="mq-text">Object-Oriented Programming</span><svg class="icon mq-star"><use href="#icon-asterisk"></use></svg></span>
+            <span class="mq-item"><span class="mq-text">DBMS</span><svg class="icon mq-star"><use href="#icon-asterisk"></use></svg></span>
+            <span class="mq-item"><span class="mq-text">Operating Systems</span><svg class="icon mq-star"><use href="#icon-asterisk"></use></svg></span>
+            <span class="mq-item"><span class="mq-text">Computer Networks</span><svg class="icon mq-star"><use href="#icon-asterisk"></use></svg></span>
+          </div>
+          <div class="marquee-row" aria-hidden="true">
+            <span class="mq-item"><span class="mq-text">Java</span><svg class="icon mq-star"><use href="#icon-asterisk"></use></svg></span>
+            <span class="mq-item"><span class="mq-text">JavaScript</span><svg class="icon mq-star"><use href="#icon-asterisk"></use></svg></span>
+            <span class="mq-item"><span class="mq-text">SQL</span><svg class="icon mq-star"><use href="#icon-asterisk"></use></svg></span>
+            <span class="mq-item"><span class="mq-text">C</span><svg class="icon mq-star"><use href="#icon-asterisk"></use></svg></span>
+            <span class="mq-item"><span class="mq-text">HTML</span><svg class="icon mq-star"><use href="#icon-asterisk"></use></svg></span>
+            <span class="mq-item"><span class="mq-text">CSS</span><svg class="icon mq-star"><use href="#icon-asterisk"></use></svg></span>
+            <span class="mq-item"><span class="mq-text">Data Structures &amp; Algorithms</span><svg class="icon mq-star"><use href="#icon-asterisk"></use></svg></span>
+            <span class="mq-item"><span class="mq-text">Object-Oriented Programming</span><svg class="icon mq-star"><use href="#icon-asterisk"></use></svg></span>
+            <span class="mq-item"><span class="mq-text">DBMS</span><svg class="icon mq-star"><use href="#icon-asterisk"></use></svg></span>
+            <span class="mq-item"><span class="mq-text">Operating Systems</span><svg class="icon mq-star"><use href="#icon-asterisk"></use></svg></span>
+            <span class="mq-item"><span class="mq-text">Computer Networks</span><svg class="icon mq-star"><use href="#icon-asterisk"></use></svg></span>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="section" data-testid="about-section">
+        <div class="container">
+          <div class="section-head reveal">
+            <p class="section-label">01 — About</p>
+            <h2 class="section-title">The craft behind the code.</h2>
+          </div>
+
+          <div class="about-grid">
+            <div class="about-card card reveal">
+              <p class="body-lg">
+                I enjoy building applications from the ground up — designing the schema,
+                developing the backend logic, connecting the APIs, and creating interfaces
+                people can actually use.
+              </p>
+              <p class="body-lg">
+                My foundation so far runs through Java, Data Structures &amp; Algorithms, DBMS
+                and frontend development. I've shipped a Java/MySQL Hostel Management System,
+                an AI-powered financial assistant at a hackathon, and a handful of web apps in
+                plain HTML, CSS and JavaScript.
+              </p>
+              <p class="body-lg">
+                Right now I'm focused on levelling up my web development skills and
+                strengthening my problem-solving — deliberately, every day.
+              </p>
+              <p class="about-location">Based in Bangalore, India</p>
+            </div>
+
+            <div class="about-stats">
+              <div class="stat-card card reveal" style="--d: 0.08s">
+                <span class="stat-icon"><svg class="icon"><use href="#icon-layers"></use></svg></span>
+                <div>
+                  <p class="metric-value">3rd</p>
+                  <p class="metric-label">Year at MSRIT</p>
+                </div>
+              </div>
+              <div class="stat-card card reveal" style="--d: 0.16s">
+                <span class="stat-icon"><svg class="icon"><use href="#icon-book-open"></use></svg></span>
+                <div>
+                  <p class="metric-value">3+</p>
+                  <p class="metric-label">Projects built</p>
+                </div>
+              </div>
+              <div class="stat-card card reveal" style="--d: 0.24s">
+                <span class="stat-icon"><svg class="icon"><use href="#icon-database"></use></svg></span>
+                <div>
+                  <p class="metric-value">6+</p>
+                  <p class="metric-label">Technologies</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="currently reveal" style="--d: 0.1s">
+            <p class="currently-label">Currently</p>
+            <ul class="currently-list">
+              <li>Sharpening full-stack web development skills</li>
+              <li>Daily DSA practice — one problem at a time</li>
+              <li>Learning how real systems are designed end-to-end</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills" class="section" data-testid="skills-section">
+        <div class="container">
+          <div class="section-head reveal">
+            <p class="section-label">02 — Toolkit</p>
+            <h2 class="section-title">What I know.</h2>
+          </div>
+
+          <div class="skills-grid">
+            <div class="skill-card card reveal">
+              <p class="card-index">01</p>
+              <h3 class="skill-title">Languages</h3>
+              <div class="tags">
                 <span class="tag">Java</span>
                 <span class="tag">JavaScript</span>
                 <span class="tag">SQL</span>
                 <span class="tag">C</span>
                 <span class="tag">HTML</span>
                 <span class="tag">CSS</span>
+              </div>
             </div>
-        
-            <h3>Core Computer Science</h3>
-            <div class="skill-tags">
+            <div class="skill-card card reveal" style="--d: 0.08s">
+              <p class="card-index">02</p>
+              <h3 class="skill-title">Core Computer Science</h3>
+              <div class="tags">
                 <span class="tag">Data Structures &amp; Algorithms</span>
                 <span class="tag">Object-Oriented Programming</span>
-                <span class="tag">DataBase Management Systems</span>
+                <span class="tag">DBMS</span>
                 <span class="tag">Operating Systems</span>
                 <span class="tag">Computer Networks</span>
+              </div>
             </div>
+          </div>
         </div>
-    </section>
+      </section>
 
-    <section class="projects" id="projects">
-        <h2>Projects</h2>
-            <div class="project-card">
-                <h3>Hostel Management System</h3>
-                <p>
-                    A Java Swing desktop application for managing students,
-                    rooms, fees, and complaints in a hostel. I built it to
-                    practise JDBC, SQL queries, and connecting a user interface
-                    to a MySQL database.
-                </p>
-                <p class="tech">
-                    Java Swing · JDBC · MySQL
-                </p>
-            </div>
+      <section id="projects" class="section" data-testid="projects-section">
+        <div class="container">
+          <div class="section-head reveal">
+            <p class="section-label">03 — Work</p>
+            <h2 class="section-title">Things I've built.</h2>
+          </div>
 
-            <div class="project-card">
-                <h3>Weather Application</h3>
-                <p>
-                    A small web application that fetches weather information
-                    for a city from an external API and displays the temperature,
-                    conditions, and humidity.
-                </p>
-                <p class="tech">
-                    HTML · CSS · JavaScript · OpenWeatherMap API
-                </p>
-            </div>
-
-            <div class="project-card">
-                <h3>TO-Do List Application</h3>
-                <p>
-                    A simple task manager to
-                    add, complete, and delete tasks 
-                    clean UI, no clutter.
-                </p>
-                <p class="tech">
-                    HTML · CSS · JavaScript
-                </p>
-            </div>
-        </section>
-
-        <section class="contact" id="contact">
-            <h2>Contact Info</h2>
-             <p>
-                I'm looking for internships, opportunities to learn from a team,
-                and interesting projects to work on.
-            </p>
-            <div class="contact-links">
-                <a href="mailto:anilkumarmaladkar@gmail.com">Email</a>
-
-                <a href="https://www.linkedin.com/in/anilkumar-m-502062327">LinkedIn</a>
-
-                <a href="https://github.com/anilkumarmaladkar-sketch">GitHub</a>
+          <div class="projects-list">
+            <article class="project-card card featured reveal" data-testid="project-card-0">
+              <div class="project-media">
+                <img
+                  src="https://static.prod-images.emergentagent.com/jobs/2ed9be05-d782-4c10-b66e-f4e399bc8029/images/f4b0a0b65e0854b564f75c89ceb328556af7eef93ac262ca70b2d0df4d9fed26.jpeg"
+                  alt="Hostel Management System"
+                  loading="lazy"
+                />
+              </div>
+              <div class="project-body">
+                <div class="project-top">
+                  <p class="card-index">01</p>
+                  <a
+                    href="https://github.com/anilkumarmaladkar-sketch"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="project-link"
+                    aria-label="Hostel Management System on GitHub"
+                  >
+                    <svg class="icon"><use href="#icon-arrow-up-right"></use></svg>
+                  </a>
                 </div>
-        </section>
-</body>
+                <h3 class="project-title">Hostel Management System</h3>
+                <p class="project-desc">
+                  A Java Swing desktop application for managing students, rooms, fees and
+                  complaints in a hostel — built to practise JDBC, SQL queries and connecting a
+                  real UI to a MySQL database.
+                </p>
+                <div class="chips">
+                  <span class="chip">Java Swing</span>
+                  <span class="chip">JDBC</span>
+                  <span class="chip">MySQL</span>
+                </div>
+              </div>
+            </article>
+
+            <div class="projects-grid">
+              <article class="project-card card reveal" data-testid="project-card-1" style="--d: 0.08s">
+                <div class="project-media">
+                  <img
+                    src="https://static.prod-images.emergentagent.com/jobs/2ed9be05-d782-4c10-b66e-f4e399bc8029/images/5b5737476c0710a1cbc8c4c8342d303f508ee1702df75c6d1e4dc012ddaec011.jpeg"
+                    alt="Sovereign Executive — AI Financial Assistant"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="project-body">
+                  <div class="project-top">
+                    <p class="card-index">02</p>
+                    <a
+                      href="https://github.com/anilkumarmaladkar-sketch"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="project-link"
+                      aria-label="Sovereign Executive on GitHub"
+                    >
+                      <svg class="icon"><use href="#icon-arrow-up-right"></use></svg>
+                    </a>
+                  </div>
+                  <h3 class="project-title">Sovereign Executive — AI Financial Assistant</h3>
+                  <p class="project-desc">
+                    Hackathon build with Team ASYNC for the Sovereign AI track: an assistant
+                    that processes financial documents, extracts key information and turns raw
+                    data into automated insights.
+                  </p>
+                  <div class="chips">
+                    <span class="chip">Python</span>
+                    <span class="chip">Streamlit</span>
+                    <span class="chip">AI / LLMs</span>
+                    <span class="chip">Document Processing</span>
+                  </div>
+                </div>
+              </article>
+
+              <article class="project-card card reveal" data-testid="project-card-2" style="--d: 0.16s">
+                <div class="project-media">
+                  <img
+                    src="https://static.prod-images.emergentagent.com/jobs/2ed9be05-d782-4c10-b66e-f4e399bc8029/images/7d56f5daccb3d6f3280a564cc7d992bca6021b3315f702f23f48b1982aba8b3e.jpeg"
+                    alt="Weather Application"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="project-body">
+                  <div class="project-top">
+                    <p class="card-index">03</p>
+                    <a
+                      href="https://github.com/anilkumarmaladkar-sketch"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="project-link"
+                      aria-label="Weather Application on GitHub"
+                    >
+                      <svg class="icon"><use href="#icon-arrow-up-right"></use></svg>
+                    </a>
+                  </div>
+                  <h3 class="project-title">Weather Application</h3>
+                  <p class="project-desc">
+                    A clean web app that fetches live weather for any city from the
+                    OpenWeatherMap API — temperature, conditions and humidity, served without
+                    clutter.
+                  </p>
+                  <div class="chips">
+                    <span class="chip">HTML</span>
+                    <span class="chip">CSS</span>
+                    <span class="chip">JavaScript</span>
+                    <span class="chip">OpenWeatherMap API</span>
+                  </div>
+                </div>
+              </article>
+
+              <article class="project-card card reveal" data-testid="project-card-3" style="--d: 0.24s">
+                <div class="project-media">
+                  <img
+                    src="https://static.prod-images.emergentagent.com/jobs/2ed9be05-d782-4c10-b66e-f4e399bc8029/images/d0ee142f270cce4c49ce4b66bf5328df2dde68b3a36e7373a910970425bfd91d.jpeg"
+                    alt="To-Do List Application"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="project-body">
+                  <div class="project-top">
+                    <p class="card-index">04</p>
+                    <a
+                      href="https://github.com/anilkumarmaladkar-sketch"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="project-link"
+                      aria-label="To-Do List Application on GitHub"
+                    >
+                      <svg class="icon"><use href="#icon-arrow-up-right"></use></svg>
+                    </a>
+                  </div>
+                  <h3 class="project-title">To-Do List Application</h3>
+                  <p class="project-desc">
+                    A minimal task manager — add, complete and delete tasks in a clean UI with
+                    zero noise. A small exercise in doing one thing well.
+                  </p>
+                  <div class="chips">
+                    <span class="chip">HTML</span>
+                    <span class="chip">CSS</span>
+                    <span class="chip">JavaScript</span>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <p class="projects-more reveal" style="--d: 0.1s">
+            More experiments on
+            <a
+              href="https://github.com/anilkumarmaladkar-sketch"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-testid="projects-github-link"
+            >GitHub</a>
+          </p>
+        </div>
+      </section>
+
+      <section id="contact" class="section" data-testid="contact-section">
+        <div class="container">
+          <div class="contact-panel">
+            <div class="glow glow-lime contact-glow" aria-hidden="true"></div>
+
+            <div class="section-head reveal">
+              <p class="section-label">04 — Contact</p>
+              <h2 class="contact-title">Let's build something.</h2>
+              <p class="contact-sub">
+                I'm looking for internships, opportunities to learn from a team, and
+                interesting projects to work on. If you have one — my inbox is open.
+              </p>
+            </div>
+
+            <div class="contact-grid">
+              <div class="contact-cards">
+                <a
+                  href="mailto:anilmaladkar@gmail.com"
+                  class="contact-card"
+                  data-testid="contact-email-link"
+                >
+                  <span class="contact-icon"><svg class="icon"><use href="#icon-mail"></use></svg></span>
+                  <span>
+                    <span class="contact-type">Email</span>
+                    <span class="contact-value">anilmaladkar@gmail.com</span>
+                  </span>
+                </a>
+
+                <a
+                  href="https://github.com/anilkumarmaladkar-sketch"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="contact-card"
+                  data-testid="contact-github-link"
+                >
+                  <span class="contact-icon"><svg class="icon"><use href="#icon-github"></use></svg></span>
+                  <span>
+                    <span class="contact-type">GitHub</span>
+                    <span class="contact-value">github.com/anilkumarmaladkar-sketch</span>
+                  </span>
+                </a>
+
+                <a
+                  href="https://www.linkedin.com/in/anilkumar-m-502062327"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="contact-card"
+                  data-testid="contact-linkedin-link"
+                >
+                  <span class="contact-icon"><svg class="icon"><use href="#icon-linkedin"></use></svg></span>
+                  <span>
+                    <span class="contact-type">LinkedIn</span>
+                    <span class="contact-value">linkedin.com/in/anilkumar-m-502062327</span>
+                  </span>
+                </a>
+
+                <p class="contact-note">Response time · usually within a day</p>
+              </div>
+
+              <form id="contact-form" class="contact-form" data-testid="contact-inquiry-form" novalidate>
+                <div class="form-row">
+                  <input
+                    type="text"
+                    id="contact-name"
+                    data-testid="contact-input-name"
+                    class="input"
+                    placeholder="Your name"
+                    autocomplete="name"
+                  />
+                  <input
+                    type="email"
+                    id="contact-email"
+                    data-testid="contact-input-email"
+                    class="input"
+                    placeholder="Your email"
+                    autocomplete="email"
+                  />
+                </div>
+                <textarea
+                  id="contact-message"
+                  data-testid="contact-input-message"
+                  class="input textarea"
+                  rows="7"
+                  placeholder="Tell me about the opportunity, team or project…"
+                ></textarea>
+                <button type="submit" class="btn btn-lime" data-testid="contact-submit-button">
+                  Send message <svg class="icon icon-sm"><use href="#icon-send"></use></svg>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer" data-testid="footer-section">
+      <div class="container">
+        <div class="footer-top">
+          <div class="footer-social">
+            <a
+              href="https://github.com/anilkumarmaladkar-sketch"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub"
+              data-testid="footer-github-link"
+            >
+              <svg class="icon"><use href="#icon-github"></use></svg>
+            </a>
+            <a href="mailto:anilmaladkar@gmail.com" aria-label="Email" data-testid="footer-email-link">
+              <svg class="icon"><use href="#icon-mail"></use></svg>
+            </a>
+            <p class="footer-clock">Bangalore · IST <span id="footer-clock">—</span></p>
+          </div>
+          <button class="footer-top-btn" id="back-to-top" data-testid="footer-back-to-top-btn">
+            Back to top <svg class="icon icon-sm"><use href="#icon-arrow-up"></use></svg>
+          </button>
+        </div>
+
+        <p class="footer-giant">Anilkumar<span class="accent">.</span>dev</p>
+
+        <div class="footer-bottom">
+          <p>© <span id="year">2026</span> Anilkumar Maladkar</p>
+          <p>Information Science · M.S. Ramaiah Institute of Technology</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
 </html>
