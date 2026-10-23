@@ -451,6 +451,7 @@ ul {
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
   background: rgba(17, 18, 23, 0.5);
   overflow: hidden;
+  cursor: grab;
 }
 
 .marquee-track {
@@ -494,25 +495,6 @@ ul {
   display: flex;
   align-items: center;
   flex-shrink: 0;
-}
-.mq-item {
-  display: flex;
-  align-items: center;
-  flex-shrink: 0;
-}
-
-
-.marquee {
-  overflow: hidden;
-  cursor: grab;
-}
-
-.marquee-track {
-  touch-action: pan-y;
-}
-
-.marquee-track.is-dragging {
-  cursor: grabbing;
 }
 
 .mq-text {
