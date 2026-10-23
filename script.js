@@ -99,10 +99,7 @@ if (marquee && track) {
   let position = 0;
   let lastTime = 0;
   let dragging = false;
-  let startX = 0;
-  let startPosition = 0;
   let lastPointerX = 0;
-  let velocity = 0;
 
   const speed = 45; // Automatic scroll speed in pixels per second
 
@@ -140,10 +137,7 @@ if (marquee && track) {
     if (event.pointerType === "mouse" && event.button !== 0) return;
 
     dragging = true;
-    startX = event.clientX;
     lastPointerX = event.clientX;
-    startPosition = position;
-    velocity = 0;
 
     track.classList.add("is-dragging");
     track.setPointerCapture(event.pointerId);
@@ -156,7 +150,6 @@ if (marquee && track) {
     lastPointerX = event.clientX;
 
     position -= delta;
-    velocity = -delta;
 
     normalizePosition();
     render();
