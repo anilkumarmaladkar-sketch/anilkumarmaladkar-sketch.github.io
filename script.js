@@ -90,3 +90,106 @@ contactForm.addEventListener("submit", (e) => {
 document.getElementById("back-to-top").addEventListener("click", () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
+
+
+const marquee = document.querySelector(".marquee");
+const track = marquee?.querySelector(".marquee-track");
+
+if (marquee && track) {
+  let position = 0;
+  let lastTime = 0;
+  let dragging = false;
+  let startX = 0;
+  let startPosition = 0;
+  let lastPointerX = 0;
+  let velocity = 0;
+
+  const speed = 45; // Automatic scroll speed in pixels per second
+
+  function getLoopWidth() {
+    return track.scrollWidth / 2;
+  }
+
+  function normalizePosition() {
+    const loopWidth = getLoopWidth();
+    if (loopWidth > 0) {
+      position = ((position % loopWidth) + loopWidth) % loopWidth;
+    }
+  }
+
+  function render() {
+    track.style.transform = `translate3d(${-position}px, 0, 0)`;
+  }
+
+  function animate(time) {
+    if (!lastTime) lastTime = time;
+
+    const delta = Math.min((time - lastTime) / 1000, 0.05);
+    lastTime = time;
+
+    if (!dragging && !marquee.matches(":hover")) {
+      position += speed * delta;
+      normalizePosition();
+      render();
+    }
+
+    requestAnimationFrame(animate);
+  }
+
+  track.addEventListener("pointerdown", (event) => {
+    if (event.pointerType === "mouse" && event.button !== 0) return;
+
+    dragging = true;
+    startX = event.clientX;
+    lastPointerX = event.clientX;
+    startPosition = position;
+    velocity = 0;
+
+    track.classList.add("is-dragging");
+    track.setPointerCapture(event.pointerId);
+  });
+
+  track.addEventListener("pointermove", (event) => {
+    if (!dragging) return;
+
+    const delta = event.clientX - lastPointerX;
+    lastPointerX = event.clientX;
+
+    position -= delta;
+    velocity = -delta;
+
+    normalizePosition();
+    render();
+  });
+
+  function stopDragging() {
+    if (!dragging) return;
+    dragging = false;
+    track.classList.remove("is-dragging");
+  }
+
+ 
+  track.addEventListener("pointerup", stopDragging);
+  track.addEventListener("pointercancel", stopDragging);
+  track.addEventListener("lostpointercapture", stopDragging);
+
+  // Allow horizontal scrolling with a mouse wheel or trackpad
+  marquee.addEventListener("wheel", (event) => {
+    const delta =
+      Math.abs(event.deltaX) > Math.abs(event.deltaY)
+        ? event.deltaX
+        : event.deltaY;
+
+    event.preventDefault();
+
+    position += delta;
+    normalizePosition();
+    render();
+  }, { passive: false });
+
+  requestAnimationFrame(animate);
+}
+
+
+
+
