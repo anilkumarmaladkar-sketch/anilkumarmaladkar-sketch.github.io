@@ -23,7 +23,7 @@
     <title>Anilkumar Maladkar — Information Science Student & Web Developer</title>
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
+  <body class="is-loading">
     <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
       <symbol id="icon-menu" viewBox="0 0 24 24"><path d="M4 12h16" /><path d="M4 6h16" /><path d="M4 18h16" /></symbol>
       <symbol id="icon-x" viewBox="0 0 24 24"><path d="M18 6 6 18" /><path d="m6 6 12 12" /></symbol>
@@ -39,6 +39,15 @@
       <symbol id="icon-book-open" viewBox="0 0 24 24"><path d="M12 7v14" /><path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z" /></symbol>
       <symbol id="icon-database" viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="9" ry="3" /><path d="M3 5V19A9 3 0 0 0 21 19V5" /><path d="M3 12A9 3 0 0 0 21 12" /></symbol>
     </svg>
+
+    <div class="loader" id="loader">
+      <div class="loader-content">
+        <p class="loader-text">INITIALIZING</p>
+        <div class="loader-progress">
+          <div class="loader-bar"></div>
+        </div>
+      </div>
+    </div>
 
     <div class="grain" aria-hidden="true"></div>
     <div id="toast-root" aria-live="polite"></div>
@@ -82,18 +91,19 @@
 
         <div class="container hero-grid">
           <div class="hero-copy">
-            <p class="eyebrow" data-testid="hero-eyebrow">
+            <p class="eyebrow h-slide" style="--i: 0" data-testid="hero-eyebrow">
               <span class="dot dot-lime pulse-dot"></span>Information Science Student · MSRIT
             </p>
             <h1 class="hero-title" data-testid="hero-headline-text">
-              Websites that<br /><span class="outline-lime">move brands</span><span class="accent">.</span>
+              <span class="h-line h-slide" style="--i: 1">Websites that</span>
+              <span class="h-line h-slide" style="--i: 2"><span class="outline-lime">move brands</span><span class="accent">.</span></span>
             </h1>
-            <p class="hero-sub">
-            I build fast, modern websites for creators and small brands —
-            designed to showcase your work, build trust, and turn visitors
-            into enquiries.
+            <p class="hero-sub h-slide" style="--i: 3">
+              I build fast, modern websites for creators and small brands —
+              designed to showcase your work, build trust, and turn visitors
+              into enquiries.
             </p>
-            <div class="hero-actions">
+            <div class="hero-actions h-slide" style="--i: 4">
               <a href="#projects" class="btn btn-lime" data-testid="hero-cta-projects">
                 View projects <svg class="icon icon-sm"><use href="#icon-arrow-down"></use></svg>
               </a>
@@ -101,7 +111,7 @@
                 Get in touch <svg class="icon icon-sm"><use href="#icon-arrow-up-right"></use></svg>
               </a>
             </div>
-            <div class="hero-metrics" data-testid="hero-metrics-grid">
+            <div class="hero-metrics h-slide" style="--i: 5" data-testid="hero-metrics-grid">
               <div class="metric">
                 <p class="metric-value">3rd</p>
                 <p class="metric-label">Year @ MSRIT</p>
@@ -117,25 +127,36 @@
             </div>
           </div>
 
+          <div class="terminal h-anim-right" data-testid="hero-terminal-card">
+            <div class="terminal-head">
+              <span class="tdot tdot-red"></span>
+              <span class="tdot tdot-yellow"></span>
+              <span class="tdot tdot-green"></span>
+              <span class="terminal-title">anil@msrit — zsh</span>
+            </div>
+            <div class="terminal-body">
+              <p class="t-cmd"><span class="t-prompt">$</span> whoami</p>
+              <p class="t-out">anilkumar — information science @ msrit bangalore</p>
+              <p class="t-cmd"><span class="t-prompt">$</span> cat stack.txt</p>
+              <p class="t-out">java · javascript · sql · c · html · css</p>
+              <p class="t-cmd"><span class="t-prompt">$</span> focus --now</p>
+              <p class="t-out">dsa daily practice · web development</p>
+              <p class="t-cmd"><span class="t-prompt">$</span> status</p>
+              <p class="t-out t-accent">open to internships → true</p>
+              <p class="t-cmd"><span class="t-prompt">$</span> <span class="cursor"></span></p>
+            </div>
+          </div>
+
           <div class="hero-visual">
-            <div class="terminal" data-testid="hero-terminal-card">
-              <div class="terminal-head">
-                <span class="tdot tdot-red"></span>
-                <span class="tdot tdot-yellow"></span>
-                <span class="tdot tdot-green"></span>
-                <span class="terminal-title">anil@msrit — zsh</span>
-              </div>
-              <div class="terminal-body">
-                <p class="t-cmd"><span class="t-prompt">$</span> whoami</p>
-                <p class="t-out">anilkumar — information science @ msrit bangalore</p>
-                <p class="t-cmd"><span class="t-prompt">$</span> cat stack.txt</p>
-                <p class="t-out">java · javascript · sql · c · html · css</p>
-                <p class="t-cmd"><span class="t-prompt">$</span> focus --now</p>
-                <p class="t-out">dsa daily practice · web development</p>
-                <p class="t-cmd"><span class="t-prompt">$</span> status</p>
-                <p class="t-out t-accent">open to internships → true</p>
-                <p class="t-cmd"><span class="t-prompt">$</span> <span class="cursor"></span></p>
-              </div>
+            <div class="portrait-container h-anim-up">
+              <div class="portrait-glow"></div>
+              <img
+                src="images/portrait.png"
+                alt="Anilkumar Maladkar"
+                class="portrait-img"
+                fetchpriority="high"
+                decoding="async"
+              />
             </div>
           </div>
         </div>

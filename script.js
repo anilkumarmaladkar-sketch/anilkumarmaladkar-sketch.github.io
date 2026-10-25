@@ -91,6 +91,37 @@ document.getElementById("back-to-top").addEventListener("click", () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
 
+// Loader (curtain riser) & hero entrance
+const loader = document.getElementById("loader");
+const entranceEls = document.querySelectorAll(
+  ".h-anim, .h-anim-up, .h-anim-right, .h-slide"
+);
+
+// Each hero element animates when it is actually on screen, so the portrait
+// (which sits below the fold on phones) plays when you scroll to it instead
+// of finishing unseen behind the loader.
+const entranceObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+        entranceObserver.unobserve(entry.target);
+      }
+    });
+  },
+  { threshold: 0.12, rootMargin: "0px 0px -8% 0px" }
+);
+
+function raiseCurtain() {
+  loader.classList.add("hidden");
+  document.body.classList.remove("is-loading");
+  // start the hero animations while the curtain is still on its way up
+  setTimeout(() => {
+    entranceEls.forEach((el) => entranceObserver.observe(el));
+  }, 450);
+}
+
+window.addEventListener("load", () => setTimeout(raiseCurtain, 1000));
 
 const marquee = document.querySelector(".marquee");
 const track = marquee?.querySelector(".marquee-track");
